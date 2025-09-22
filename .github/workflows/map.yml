@@ -1,0 +1,17 @@
+name: map
+on:
+  push:
+
+jobs:
+  geocode:
+    runs-on: ubuntu-latest
+    environment: map
+    steps:
+      - uses: actions/checkout@main
+      - uses: davidkhala/uv-buildpack@main
+        with:
+          test-entry-point: pytest test_geocode.py
+          tests: map/py/tests
+          working-directory: map/py
+        env:
+          AK: ${{secrets.AK}}
