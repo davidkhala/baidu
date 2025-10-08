@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: davidkhala/uv-buildpack@main
         with:
-          test-entry-point: pytest test_geocode.py
+          test-entry-point: pytest test_map.py
           tests: map/py/tests
           working-directory: map/py
         env:
