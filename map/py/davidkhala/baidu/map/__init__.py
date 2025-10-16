@@ -1,4 +1,4 @@
-from davidkhala.http_request import Request
+from davidkhala.utils.http_request import Request
 
 
 class API(Request):
